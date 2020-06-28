@@ -56,8 +56,90 @@ namespace tomi_valasztas
             {
                 összes  = összes + adatok[i].szavazat;
             }
-            double szazalek = összes*100.0/osszszavazo;
-            Console.WriteLine("A választáson {0} állampolgár, a jogosultak {1}%-a vett részt.",összes,szazalek);
+            double szazalek = összes * 100.0 / osszszavazo;
+            Console.WriteLine("A választáson {0} állampolgár, a jogosultak {1}%-a vett részt.",összes,Math.Round(szazalek,2));
+
+            //5.feladat
+            /*int gyep =  0;
+            int zep = 0;
+            int hep = 0;
+            int tisz = 0;
+            int fuggetlen = 0;
+            for (int i =0;i<n;i ++)
+            {
+                if ("GYEP" ==adatok[i].part)
+                {
+                    gyep = gyep + adatok[i].szavazat;
+                }
+                if ("ZEP" == adatok[i].part)
+                {
+                    zep = zep + adatok[i].szavazat;
+                }
+                if ("HEP" == adatok[i].part)
+                {
+                    hep = hep + adatok[i].szavazat;
+                }
+                if ("TISZ" == adatok[i].part)
+                {
+                    tisz = tisz + adatok[i].szavazat;
+                }
+                if ("-" == adatok[i].part)
+                {
+                    fuggetlen = fuggetlen + adatok[i].szavazat;
+                }
+            }
+            Console.WriteLine("Gyümölcsevők Pártja: {0}%",Math.Round(gyep*100.0/osszszavazo,2));
+            Console.WriteLine("Zöldségevők Pártja: {0}%", Math.Round(zep * 100.0 / osszszavazo, 2));
+            Console.WriteLine("Húsevők Pártja: {0}%", Math.Round(hep * 100.0 / osszszavazo, 2));
+            Console.WriteLine("Tejivók Szövetsége: {0}%", Math.Round(tisz * 100.0 / osszszavazo, 2));
+            Console.WriteLine("Független jelöltek: {0}%", Math.Round(fuggetlen * 100.0 / osszszavazo, 2));
+            */
+            string[] partok = { "GYEP", "HEP", "TISZ", "ZEP", "-" };  
+            for(int i = 0; i < partok.Length; i++)
+            {
+                int osszegez = 0;
+                for (int j = 0;j<n;j++)
+                {
+                    if (partok[i] == adatok[j].part)
+                    {
+                        osszegez += adatok[j].szavazat;
+                    }                  
+                }
+                double szazaleki = Math.Round((double)osszegez / osszszavazo * 100,2);
+                if (partok[i] == "-")
+                {
+                    Console.WriteLine($"Függetlenek Pártja= {szazaleki}%");
+                }
+                else
+                {
+                    Console.WriteLine($"{partok[i]} Pártja= {szazaleki}%");
+                }              
+            }
+
+            //6.feladat
+            int max = 0;
+            for (int i =0;i<n;i++ )
+            {
+                if (max < adatok[i].szavazat)
+                {
+                    max = adatok[i].szavazat;
+                }
+            }
+            for (int i = 0; i < n; i++)
+            {
+                if (max== adatok[i].szavazat)
+                {
+                    if (adatok[i].part == "-")
+                    {
+                        Console.WriteLine(adatok[i].nev + " Független");
+                    }
+                    else
+                    {
+                        Console.WriteLine(adatok[i].nev + " " + adatok[i].part);
+                    }
+                }
+            }
+            
             Console.ReadKey();
         }
     }
