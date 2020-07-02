@@ -1,7 +1,7 @@
 C:\Users\Rendszergazda\Documents\GitHub\tomi_valasztas\tomi_valasztas\bin\Debug\tomi_valasztas.exe.config
 C:\Users\Rendszergazda\Documents\GitHub\tomi_valasztas\tomi_valasztas\bin\Debug\tomi_valasztas.exe
 C:\Users\Rendszergazda\Documents\GitHub\tomi_valasztas\tomi_valasztas\bin\Debug\tomi_valasztas.pdb
-C:\Users\Rendszergazda\Documents\GitHub\tomi_valasztas\tomi_valasztas\obj\Debug\tomi_valasztas.csprojAssemblyReference.cache
 C:\Users\Rendszergazda\Documents\GitHub\tomi_valasztas\tomi_valasztas\obj\Debug\tomi_valasztas.csproj.CoreCompileInputs.cache
 C:\Users\Rendszergazda\Documents\GitHub\tomi_valasztas\tomi_valasztas\obj\Debug\tomi_valasztas.exe
 C:\Users\Rendszergazda\Documents\GitHub\tomi_valasztas\tomi_valasztas\obj\Debug\tomi_valasztas.pdb
+C:\Users\Rendszergazda\Documents\GitHub\tomi_valasztas\tomi_valasztas\obj\Debug\tomi_valasztas.csprojAssemblyReference.cache

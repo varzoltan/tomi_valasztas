@@ -139,7 +139,35 @@ namespace tomi_valasztas
                     }
                 }
             }
-            
+            //7.feladat
+            StreamWriter ir = new StreamWriter(@"C:\Users\Rendszergazda\Desktop\2013-majus\kepviselok.txt");
+            for(int i = 1; i < n; i++)
+            {
+                int maximum = 0,z = 0;
+                for(int j = 0; j < n; j++)
+                {
+                    if (adatok[j].sorszam == i)
+                    {
+                        if (adatok[j].szavazat > maximum)
+                        {
+                            maximum = adatok[j].szavazat;
+                            z = j;
+                        }
+                    }
+                }
+                if (maximum != 0)
+                {
+                    if (adatok[z].part == "-")
+                    {
+                        ir.WriteLine($"{i}.választókerületben győztes: {adatok[z].nev} pártja: független.");
+                    }
+                    else
+                    {
+                        ir.WriteLine($"{i}.választókerületben győztes: {adatok[z].nev} pártja: {adatok[z].part}");
+                    }           
+                }
+            }
+            ir.Close();
             Console.ReadKey();
         }
     }
